@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>User Registration</h1>
+
+<form method="POST">
+
+    <label>Full Name</label>
+    <input 
+        type="text" 
+        name="full_name" 
+        value="{{ full_name or '' }}"
+        required
+    >
+
+    <label>Email Address</label>
+    <input 
+        type="email" 
+        name="email" 
+        value="{{ email or '' }}"
+        required
+    >
+
+    <label>Phone Number</label>
+    <input 
+        type="text" 
+        name="phone" 
+        value="{{ phone or '' }}"
+        required
+    >
+
+    <label>Short Bio</label>
+    <textarea name="bio" required>{{ bio or '' }}</textarea>
+
+    <button type="submit">Register User</button>
+
+</form>
+
+{% endblock %}
